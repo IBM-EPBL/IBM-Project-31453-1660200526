@@ -1,0 +1,24 @@
+1. Full-Stack Framework
+
+A full-stack framework, also known as enterprise framework, is the one-stop solution for all development needs. 
+These have built-in libraries configured to work seamlessly together.
+They support the development of databases, frontend interfaces, and backend services.
+
+
+2. Django
+Django is an open-source, full-stack Python framework. It follows the DRY (Don’t Repeat Yourself) principle.
+Django comes equipped with a vast line of ready-to-use libraries. Some of its most exceptional features are authentication, URL routing, template engine, object-relational mapper (ORM),
+and database schema migrations.Together, these make Django highly scalable, fast, and versatile.
+
+
+3. Pyramid 
+Pyramid boasts of an active community that’s continually contributing to enrich the framework.
+
+
+4.Web2py
+Web2py is a highly scalable, open-source full-stack Python framework. It comes with its individual web-based IDE that includes a code editor, debugger, and a one-click deployment feature.
+
+
+5.CherryPy
+CherryPy is one of the oldest open-source, object-oriented Python microframeworks. Following a minimalistic approach, CherryPy is designed for extensibility.
+It includes mechanisms for hook points and extensions.
