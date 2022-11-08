@@ -1,0 +1,65 @@
+html {
+    background: linear-gradient(#85FFBD, #87CEEB);
+    height: 100%;
+    font-family: 'roboto', sans-serif;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+form input[type="submit"], button {
+    height: 50px;
+    width: 200px;
+    background: linear-gradient(#85FFBD, #87CEEB);
+    border: 1px solid #f2f2f2;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    max-width: 400px;
+    width: 80%; 
+    line-height: 3em;
+    margin: 1em 2em;
+    border-radius: 5px;
+    border: 2px solid #f2f2f2;
+    outline: none;
+    padding-left: 10px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    display: block;
+    height: 50px;
+    width: 200px;
+    background: linear-gradient(#E61F20, #C9000B);
+    border: 1px solid #f2f2f2;
+    text-transform: uppercase;
+    cursor: pointer;
+    max-width: 400px;
+    width: 80%; 
+    line-height: 3em;
+    margin: 1em 4em;
+    border-radius: 5px;
+    border: 2px solid #f2f2f2;
+    outline: none;
+}
+
+.card {
+    margin-top: 100px;
+    background-color: white;
+    width: 550px;
+    height: inherit;
+    padding: 20px;
+    border-radius: 12px;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="card">
+      <h1>LOG IN</h1>
+      <strong> Don't have an account? <a href="/"><button>Sign in</button></a></strong>
+      <form method="POST" action="">
+        <div> <input type="text" placeholder="Username" name="user" required /></div>
+        <div> <input type="password" placeholder="Password" name="password" required/></div>
+        <input type="submit" value="Log In" />
+      </form>
+      <a href="/google_login"><button>Sign in with Gmail</button></a>
+      <br />
+      <strong>{{msg}}</strong>
+    </div>
+  </body>
+</html>

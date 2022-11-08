@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="card">
+      <h1>Profile</h1>
+      <h2>UserName : {{user}}</h2>
+      <h2>Email : {{email}}</h2>
+      <a href="/changepwd"><button>Change Password</button></a>
+      <a href="/home"><button>Back to Home</button></a>
+      <br />
+      <strong>{{msg}}</strong>
+    </div>
+  </body>
+</html>

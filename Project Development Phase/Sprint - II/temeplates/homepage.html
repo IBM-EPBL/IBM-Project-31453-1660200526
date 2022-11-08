@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="card">
+      <h1>Welcome {{user}}!</h1>
+      <a href="/logout"><button>Logout</button></a>
+      <a href="/delete"><button>Delete Account</button></a>
+      <a href="/profile"><button>Profile</button></a>
+
+      <form method="POST" action="">
+        <label for="file-upload" class="custom-file-upload">
+          Upload Food Image
+        </label>
+        <input id="file-upload" type="file" name="food"/>
+        <input type="submit" value="Submit" />
+      </form>
+      <h1>{{msg}}</h1>
+    </div>
+  </body>
+</html>
