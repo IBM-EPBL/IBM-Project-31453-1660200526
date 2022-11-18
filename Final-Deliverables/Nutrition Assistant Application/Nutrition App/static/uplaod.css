@@ -1,0 +1,70 @@
+body {
+    background-image: url("calorie_calc_bg.png");
+    background-color: #6bf151e0;
+    background-blend-mode: color-burn;
+    background-size: 430px 400px;
+    
+  }
+  .uploadOuter {
+    text-align: center;
+    padding: 30px;
+  }
+  h2,
+  h3 {
+    color: #000c66;
+  }
+  table {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+    margin-bottom: auto;
+    padding: 30px;
+  }
+  #file {
+    padding: 15px;
+    width: 300px;
+    height: 180px;
+    text-align: center;
+    border: 2px dotted #050a30;
+    border-radius: 7px;
+    cursor: pointer;
+    position: relative;
+    color: #000c66;
+  }
+  .dragBox {
+    padding: 15px;
+    width: 300px;
+    height: 180px;
+    border-radius: 7px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    line-height: 95px;
+    border: 2px dotted #050a30;
+    display: inline-block;
+    transition: transform 0.3s;
+  }
+  input[type="file"] {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+  .draging {
+    transform: scale(1.1);
+  }
+  #preview {
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+  }
+  #b1 {
+    background-color: #000c66;
+    color: white;
+    border: none;
+  }
