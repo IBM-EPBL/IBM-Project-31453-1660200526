@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <title>Calorie Calculator</title>
+
+    <style>
+      body {
+        background-color: #f1f375d7;
+        background-image: url("{{url_for('static',filename='calorie_calc_bg.png')}}");
+        background-blend-mode: color-burn;
+        background-size: 430px 400px;
+      }
+      .results {
+        display: none;
+      }
+
+      .btn {
+        background: lighten(#06837f, 3%);
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 mx-auto">
+          <div class="card card-body text-center mt-5">
+            <h3 class="heading display-5 pb-3 mb-4">
+              Enter your personal details
+            </h3>
+            <form id="calorie-form" method="post" action="/addpersonaldetails">
+              <div class="form-group row">
+                <label for="age" class="col-sm-2 col-form-label">Age</label>
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="age"
+                    name="age"
+                    placeholder="Age > 17"
+                    pattern="(?:1[01][0-9]|120|1[7-9]|[2-9][0-9])$"
+                    required
+                  />
+                </div>
+              </div>
+
+              <fieldset class="form-group">
+                <div class="row">
+                  <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                  <div class="col-sm-10" id="form-radio">
+                    <div
+                      class="custom-control custom-radio custom-control-inline"
+                    >
+                      <input
+                        type="radio"
+                        id="male"
+                        name="Gender"
+                        value="male"
+                        class="custom-control-input"
+                        checked="checked"
+                      />
+                      <label class="custom-control-label" for="male"
+                        >Male</label
+                      >
+                    </div>
+                    <div
+                      class="custom-control custom-radio custom-control-inline"
+                    >
+                      <input
+                        type="radio"
+                        id="female"
+                        name="Gender"
+                        value="female"
+                        class="custom-control-input"
+                      />
+                      <label class="custom-control-label" for="female"
+                        >Female</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="form-group row">
+                <label for="weight" class="col-sm-2 col-form-label"
+                  >Weight</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="weight"
+                    name="weight"
+                    placeholder="In kilograms"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="height" class="col-sm-2 col-form-label"
+                  >Height</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="height"
+                    name="height"
+                    placeholder="In centimeters"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <legend class="col-form-label col-sm-2 pt-0">Activity</legend>
+                <select
+                  class="custom-select col-sm-10 col-lg-9 ml-3"
+                  id="list"
+                  name="activity"
+                >
+                  <option selected value="1">
+                    Sedentary (little or no exercise)
+                  </option>
+                  <option value="2">
+                    Lightly active (light exercise/sports 1-3 days/week)
+                  </option>
+                  <option value="3">
+                    Moderately active (moderate exercise/sports 3-5 days/week)
+                  </option>
+                  <option value="4">
+                    Very active (hard exercise/sports 6-7 days a week)
+                  </option>
+                  <option value="5">
+                    Extra active (very hard exercise/sports & physical job or 2x
+                    training)
+                  </option>
+                </select>
+              </div>
+
+              <div class="form-group" style="margin-top: 70px">
+                <input
+                  type="submit"
+                  value="Proceed to dashboard"
+                  class="btn btn-block"
+                  style="background-color: #06837f; color: white"
+                />
+                <input
+                  type="button"
+                  onclick="window.history.back()"
+                  value="Go Back"
+                  class="btn btn-block"
+                  style="background-color: #06837f; color: white"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

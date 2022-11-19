@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='home-style.css')}}"
+    />
+    <title>HOME</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <header>
+      <img
+        class="logo"
+        src="{{url_for('static',filename='Nutri.png')}}"
+        alt="logo"
+      />
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="nutri">NutriAux</label>
+        <ul>
+          <li><a href="{{url_for('reg')}}">Register</a></li>
+          <li><a href="{{url_for('login')}}">Login</a></li>
+          <li><a href="{{url_for('upload')}}">Upload</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="bg-text">
+      <p>
+        <span>Nutrition Assistant</span> is the web application
+      </p>
+    </div>
+    <section></section>
+  </body>
+</html>
