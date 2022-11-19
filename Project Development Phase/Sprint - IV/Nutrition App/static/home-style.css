@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: verdana;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #69fd00;
+  }
+  span {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+  }
+  img.logo {
+    height: 60px;
+    width: 80px;
+    margin: 10px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav {
+    background-color: #69fd00;
+    height: 80px;
+    width: 100%;
+  }
+  label.nutri {
+    padding: 0 30px;
+    color: black;
+    font-size: 25px;
+    line-height: 80px;
+    font-weight: bold;
+  }
+  nav ul {
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a {
+    color: black;
+    font-size: 17px;
+    border: 1px solid transparent;
+    padding: 7px 13px;
+    border-radius: 3px;
+  }
+  a.active,
+  a:hover {
+    background: #80cc66;
+    border: 1px solid white;
+    transition: 0.5s;
+  }
+  .checkbtn {
+    font-size: 30px;
+    color: crimson;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check {
+    display: none;
+  }
+  .bg-text {
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/opacity/see-through */
+    color: white;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 10px;
+    text-align: justify;
+    font-size: 22px;
+  }
+  
+  @media (max-width: 992px) {
+    label.nutri {
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a {
+      font-size: 16px;
+    }
+    .bg-text {
+      margin-top: 50px;
+      top: 50%;
+      left: 50%;
+    }
+  }
+  @media (max-width: 858px) {
+    .checkbtn {
+      display: block;
+    }
+    label.nutri {
+      display: none;
+    }
+    .bg-text {
+      font-size: 15px;
+      top: 50%;
+      left: 50%;
+    }
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #ffee99;
+      z-index: 20;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+    }
+    nav ul li {
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a {
+      font-size: 20px;
+      color: black;
+    }
+    a.active,
+    a:hover {
+      background: none;
+      border: none;
+      color: #f26d1b;
+    }
+    #check:checked ~ ul {
+      left: 0;
+    }
+  }
+  section {
+    width: 100%;
+    background: url(food2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: calc(100vh - 80px);
+    background-repeat: no-repeat;
+  }
